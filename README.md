@@ -8,12 +8,13 @@ Prévia de site para a **Leide Feitosa** ([@leidefeitosanails](https://www.insta
 
 ## Estrutura
 
-- `index.html`: página única com topo, as duas portas (Atendimento e Formação), serviços e trabalhos, "Cada etapa conta", cursos e turmas, percurso, pedido pelo WhatsApp e rodapé.
+- `index.html`: página única com topo (logo oficial), Sobre (retrato, história e linha do tempo), serviços e trabalhos, "Cada etapa conta", cursos e turmas, pedido pelo WhatsApp e rodapé.
 - `assets/js/brilho.js`: shader do topo. Desenha a foto `hero.webp` e acrescenta por cima uma faixa de luz que atravessa o cetim e glitter champanhe a cintilar. Só o tecido recebe o efeito; mão e unhas ficam como na foto.
 - `assets/js/site.js`: menu, revelação ao rolar, hero vivo e montagem da mensagem do WhatsApp.
   - O hero vivo é WebGL no rato e MP4 no toque. Se o WebGL falhar, fica a foto parada.
   - A mensagem do WhatsApp tem duas abas, Atendimento e Formação. O botão "Pedir vaga" de cada curso já abre a aba com o curso escolhido.
 - `assets/video/hero-pe.mp4` e `hero-quadrado.mp4`: o mesmo shader renderizado em loop de 14 s, sem emenda, por `tools/gerar_video.py`.
+- `assets/img/logo.svg` (logo completa) e `logo-lf.svg` (só o monograma, para a nav e o favicon): reconstruídas da marca d'água das fotos dela por `../tools/logo_empilhar.py` (33 fotos alinhadas e somadas) e vetorizadas por `../tools/logo.py`. Entram no site como máscara CSS com o degradê dourado.
 - `tools/gerar_og.py`: imagem de partilha com o conteúdo ao centro, porque o WhatsApp recorta em quadrado.
 - As fotos saem de `../_ref/ig` por `../tools/processar.py`. A foto do topo recebe acerto de branco, porque o cetim original puxava para o azul.
 
@@ -26,12 +27,12 @@ Prévia de site para a **Leide Feitosa** ([@leidefeitosanails](https://www.insta
 ### Identidade
 
 - **Cores:** cetim `#ece8e3`, verniz `#141011` e champanhe `#c9a66b`. O champanhe vem do logo dourado dela.
-- **Fontes:** Gilda Display (títulos), Figtree (texto) e Great Vibes (marca escrita, próxima do logo em script).
+- **Fontes:** Gilda Display (títulos) e Figtree (texto). A marca é a logo oficial dela.
 - **Botões:** retos, com reflexo de verniz a correr no hover.
 
 ## CONFIRMAR antes de publicar
 
-- [ ] **Logo oficial**: o "LF" em script dourado só aparece numa foto de cartão. A marca no site é provisória (Great Vibes). Pedir o ficheiro.
+- [ ] **Logo oficial**: a do site foi reconstruída da marca d'água das fotos (empilhadas para limpar o fundo). Ficou fiel no desenho, mas os olhos dos "e" perderam-se no desfoque e o traço está um pouco mais grosso. Pedir o ficheiro original (SVG, PDF ou PNG grande) e trocar `logo.svg` e `logo-lf.svg`.
 - [ ] **Morada do estúdio em Braga**: hoje o site diz só "Braga, Portugal". O destaque "localização" tem 234 semanas, é da época do Brasil, e não foi aberto.
 - [ ] **Serviços e valores**: a lista foi tirada das legendas (acrílico, gel, fibra, manutenção, banho, esmaltação). Falta confirmar se faz pés e se tem remoção.
 - [ ] **Cursos**: os nomes vieram dos destaques e das legendas (Curso VIP, Acrílico Elite, Fiber Class, Work Day, formação de equipa).
