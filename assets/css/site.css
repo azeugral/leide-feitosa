@@ -5,9 +5,6 @@
   --nude:#d8b9aa; --champ:#c9a66b; --champ-claro:#e9d6ac; --champ-txt:#8a6530;
   --linha:rgba(20,16,17,.14); --linha-clara:rgba(233,214,172,.22);
   --serif:'Gilda Display',Georgia,serif; --sans:'Figtree',system-ui,sans-serif; 
-  /* dourado da logo: o degradê metálico da marca d'água dela, escurecido para o cetim */
-  --ouro:linear-gradient(158deg,#5e411c 0%,#9a7440 34%,#cfae72 50%,#8a6530 66%,#4f3616 100%);
-  --ouro-claro:linear-gradient(158deg,#b8955c 0%,#f1e2bd 45%,#c9a66b 70%,#e9d6ac 100%);
   --ease:cubic-bezier(.16,.84,.32,1);
   --pad:clamp(16px,5vw,72px);
   --nav-h:72px;
@@ -50,7 +47,7 @@ p{margin:0}
 .nav.solida{background:rgba(236,232,227,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--linha)}
 .marca{display:flex;align-items:center;gap:12px;text-decoration:none;line-height:1}
 /* a logo entra como máscara: a cor vem do fundo (degradê dourado), o desenho vem do SVG */
-.marca-lf{--m:url(../img/logo-lf.svg);display:block;width:50px;aspect-ratio:999/929;background:var(--ouro);-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}
+.marca-lf{display:block;width:48px;height:auto}
 .marca-txt{display:flex;flex-direction:column;gap:5px;font:500 12px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--verniz);white-space:nowrap}
 .marca-txt small{font-size:9px;letter-spacing:.5em;color:var(--champ-txt)}
 .nav-links{display:flex;align-items:center;gap:clamp(18px,2.4vw,36px)}
@@ -77,8 +74,7 @@ p{margin:0}
   padding:calc(var(--nav-h) + 4vh) 0 6vh var(--pad);margin-right:-5vw}
 .hero-local{font:500 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--champ-txt);margin-bottom:clamp(14px,2.4vh,24px)}
 .hero-nome{line-height:0}
-.hero-logo{--m:url(../img/logo.svg);display:block;width:min(100%,clamp(260px,29vw,480px),calc(46vh * 1.176));aspect-ratio:1767/1502;
-  background:var(--ouro);-webkit-mask:var(--m) left center/contain no-repeat;mask:var(--m) left center/contain no-repeat}
+.hero-logo{display:block;width:min(100%,clamp(280px,32vw,540px),calc(44vh * 1.445));height:auto}
 .hero-sub{max-width:30em;margin-top:clamp(16px,2.8vh,28px);font-size:clamp(16px,1.25vw,19px);color:var(--tinta-2)}
 .hero-botoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(22px,4vh,40px)}
 .hero-info{list-style:none;padding:0;margin:clamp(24px,5vh,52px) 0 0;display:flex;flex-wrap:wrap;gap:10px 30px;font-size:14px;color:var(--tinta-2)}
@@ -186,7 +182,7 @@ p{margin:0}
 /* rodapé */
 .rodape{background:var(--verniz);color:rgba(245,242,238,.8);padding:clamp(56px,7vw,90px) var(--pad) 28px}
 .rodape-grade{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:40px;padding-bottom:44px;border-bottom:1px solid var(--linha-clara)}
-.rodape-logo{--m:url(../img/logo.svg);width:clamp(200px,22vw,280px);aspect-ratio:1767/1502;margin:0;background:var(--ouro-claro);-webkit-mask:var(--m) left center/contain no-repeat;mask:var(--m) left center/contain no-repeat}
+.rodape-logo{display:block;width:clamp(220px,24vw,300px);height:auto}
 .rodape-sub{margin-top:8px;font-size:15px}
 .rodape-info{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:22px 32px;font-size:15px}
 .rodape-info span{display:block;font:500 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--champ);margin-bottom:8px}
@@ -225,7 +221,7 @@ p{margin:0}
   .hero-arte img,.hero-arte canvas,.hero-arte video{object-position:50% 10%}
   .hero-texto{grid-column:1;grid-row:2;margin:-7svh 0 0;padding:0 var(--pad) 5svh;align-self:start}
   .hero-local{font-size:12px;margin-bottom:12px}
-  .hero-logo{width:min(58vw,300px,calc(26svh * 1.176))}
+  .hero-logo{width:min(58vw,300px,calc(24svh * 1.445))}
   .hero-sub{font-size:16px;margin-top:12px}
   .hero-botoes{margin-top:20px;display:grid;grid-template-columns:1fr 1fr}
   .hero-botoes .btn{padding:0 12px}
@@ -270,7 +266,7 @@ p{margin:0}
   .hero-arte{height:50vh;height:50svh}
   .hero-texto{margin-top:-6svh;padding-bottom:3svh}
   .hero-sub{font-size:15px;line-height:1.5}
-  .hero-logo{width:min(52vw,calc(22svh * 1.176))}
+  .hero-logo{width:min(52vw,calc(20svh * 1.445))}
 }
 /* telas baixas deitadas (celular de lado) */
 @media (max-height:520px) and (orientation:landscape){
@@ -278,7 +274,7 @@ p{margin:0}
   .hero-arte{grid-column:2;grid-row:1;height:100vh;height:100svh;clip-path:inset(0 0 0 100%);
     -webkit-mask-image:linear-gradient(to right,transparent 0,#000 22%);mask-image:linear-gradient(to right,transparent 0,#000 22%)}
   .hero-texto{grid-column:1;grid-row:1;margin:0 -8vw 0 0;padding:calc(var(--nav-h) + 8px) 0 16px var(--pad);align-self:center}
-  .hero-logo{width:calc(30vh * 1.176)}
+  .hero-logo{width:calc(28vh * 1.445)}
   .hero-sub{font-size:14px;margin-top:8px}
   .hero-botoes{margin-top:14px;display:flex}
   .hero-botoes .btn{min-height:44px}

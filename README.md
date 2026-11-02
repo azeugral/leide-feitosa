@@ -14,7 +14,7 @@ Prévia de site para a **Leide Feitosa** ([@leidefeitosanails](https://www.insta
   - O hero vivo é WebGL no rato e MP4 no toque. Se o WebGL falhar, fica a foto parada.
   - A mensagem do WhatsApp tem duas abas, Atendimento e Formação. O botão "Pedir vaga" de cada curso já abre a aba com o curso escolhido.
 - `assets/video/hero-pe.mp4` e `hero-quadrado.mp4`: o mesmo shader renderizado em loop de 14 s, sem emenda, por `tools/gerar_video.py`.
-- `assets/img/logo.svg` (logo completa) e `logo-lf.svg` (só o monograma, para a nav e o favicon): reconstruídas da marca d'água das fotos dela por `../tools/logo_empilhar.py` (33 fotos alinhadas e somadas) e vetorizadas por `../tools/logo.py`. Entram no site como máscara CSS com o degradê dourado.
+- `assets/img/logo.webp` (logo completa) e `logo-lf.webp` (só o monograma, para a nav), mais `favicon.png` e `apple-touch-icon.png`: saem da logo oficial enviada (`../_ref/logo/oficial/logo-oficial.webp`, dourado com fundo transparente) por `../tools/logo_oficial.py`.
 - `tools/gerar_og.py`: imagem de partilha com o conteúdo ao centro, porque o WhatsApp recorta em quadrado.
 - As fotos saem de `../_ref/ig` por `../tools/processar.py`. A foto do topo recebe acerto de branco, porque o cetim original puxava para o azul.
 
@@ -32,7 +32,7 @@ Prévia de site para a **Leide Feitosa** ([@leidefeitosanails](https://www.insta
 
 ## CONFIRMAR antes de publicar
 
-- [ ] **Logo oficial**: a do site foi reconstruída da marca d'água das fotos (empilhadas para limpar o fundo). Ficou fiel no desenho, mas os olhos dos "e" perderam-se no desfoque e o traço está um pouco mais grosso. Pedir o ficheiro original (SVG, PDF ou PNG grande) e trocar `logo.svg` e `logo-lf.svg`.
+- [x] **Logo oficial**: recebida e aplicada no topo, na nav, no rodapé, no favicon e na imagem de partilha. Se houver versão em SVG ou PNG maior, trocar em `_ref/logo/oficial` e correr `tools/logo_oficial.py`.
 - [ ] **Morada do estúdio em Braga**: hoje o site diz só "Braga, Portugal". O destaque "localização" tem 234 semanas, é da época do Brasil, e não foi aberto.
 - [ ] **Serviços e valores**: a lista foi tirada das legendas (acrílico, gel, fibra, manutenção, banho, esmaltação). Falta confirmar se faz pés e se tem remoção.
 - [ ] **Cursos**: os nomes vieram dos destaques e das legendas (Curso VIP, Acrílico Elite, Fiber Class, Work Day, formação de equipa).
